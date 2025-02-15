@@ -29,7 +29,7 @@ modelFit = model.gridsearch(x_train, y_train)
 
 
 X_test = data_test[['month','day','hour']].values
-y_pred = modelFit.predict(X_test)
+pred = modelFit.predict(X_test)
 
 
 predictions_df = pd.DataFrame({"hour_index": np.arange(len(y_pred)), "predicted_trips": y_pred})
