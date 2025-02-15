@@ -32,5 +32,5 @@ X_test = data_test[['month','day','hour']].values
 pred = modelFit.predict(X_test)
 
 
-predictions_df = pd.DataFrame({"hour_index": np.arange(len(y_pred)), "predicted_trips": y_pred})
+predictions_df = pd.DataFrame({"hour_index": np.arange(len(pred)), "predicted_trips": pred})
 predictions_df.to_csv("predictions.csv", index=False)
