@@ -25,7 +25,7 @@ y_train = data_train['trips'].values
 
 
 model = LinearGAM(s(0) + s(1) + s(2))
-modelFit = model.gridsearch(x_train, y_train)
+modelFit = model.fit(x_train, y_train)
 
 
 X_test = data_test[['month','day','hour']].values
